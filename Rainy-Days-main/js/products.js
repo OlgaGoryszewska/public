@@ -8,16 +8,18 @@ const fullPagesURL = apiBase + pagesBase;
 const fullProductURL = apiBase + wooCommerceBase + productBase;
 const fullProductURLExample = "http://olga-rainy-days-cms.local/wp-json/wc/store/products";
 
+console.log(fullProductURLExample)
+
 async function getProducts(){
     const response = await fetch(fullProductURL);
 
     const products = await response.json();
+    
 
-    return products
+    return products;
+
 
 }
-
-
 
 function createProductPreviewCard(product){
     const container = document.querySelector(".container");
@@ -63,4 +65,3 @@ async function main() {
 }
 
 main()
-
